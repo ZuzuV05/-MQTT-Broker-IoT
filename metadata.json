@@ -1,0 +1,10 @@
+{
+  "name": "IoT Lamp & Sensor Control",
+  "description": "Web interface IoT untuk sistem kendali lampu dan sensor suhu/kelembapan via MQTT.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
