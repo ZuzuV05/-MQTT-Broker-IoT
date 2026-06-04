@@ -22,9 +22,15 @@ const BROKERS: MqttBrokerConfig[] = [
     },
   },
   {
-    id: 'mqttcool',
-    name: 'broker.mqtt.cool',
-    url: isHttps ? 'wss://broker.mqtt.cool/mqtt' : 'ws://broker.mqtt.cool:80/mqtt',
+    id: 'flespi',
+    name: 'mqtt.flespi.io',
+    url: 'wss://mqtt.flespi.io:443',
+    options: {
+      username: 'fhEVlSjffqf1rMgFfsUDhMB2V6NWa3detBenf33ijZYhRbGnMAkcfguSHkI9DcE8',
+      password: '',
+      clientId: `client_${Math.random().toString(16).slice(3)}`,
+      reconnectPeriod: 5000,
+    },
   },
 ];
 
