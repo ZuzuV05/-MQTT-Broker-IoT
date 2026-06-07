@@ -26,7 +26,7 @@ const BROKERS: MqttBrokerConfig[] = [
     name: 'mqtt.flespi.io',
     url: 'wss://mqtt.flespi.io:443',
     options: {
-      username: 'fhEVlSjffqf1rMgFfsUDhMB2V6NWa3detBenf33ijZYhRbGnMAkcfguSHkI9DcE8',
+      username: 'luXv03hboawBqlCMYVRUMap7Hxrg54fqgA355rvStF6ODtdarBk0D3c3YTf8zxSI',
       password: '',
       clientId: `client_${Math.random().toString(16).slice(3)}`,
       reconnectPeriod: 5000,
