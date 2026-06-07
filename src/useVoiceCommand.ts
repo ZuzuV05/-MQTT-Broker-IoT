@@ -77,17 +77,20 @@ export function useVoiceCommand({ onCommand, sensorData }: UseVoiceCommandProps)
       return;
     }
 
+    // Helper to check if text contains any of the queries
+    const match = (queries: string[]) => queries.some(q => text.includes(q));
+
     // Relay 1-4 ON
-    if (text.includes('hidupkan relay satu')) onCommand('iot/lampu/relay/1', 'ON');
-    else if (text.includes('hidupkan relay dua')) onCommand('iot/lampu/relay/2', 'ON');
-    else if (text.includes('hidupkan relay tiga')) onCommand('iot/lampu/relay/3', 'ON');
-    else if (text.includes('hidupkan relay empat')) onCommand('iot/lampu/relay/4', 'ON');
+    if (match(['hidupkan relay satu', 'hidupkan relay 1'])) onCommand('iot/lampu/relay/1', 'ON');
+    else if (match(['hidupkan relay dua', 'hidupkan relay 2'])) onCommand('iot/lampu/relay/2', 'ON');
+    else if (match(['hidupkan relay tiga', 'hidupkan relay 3'])) onCommand('iot/lampu/relay/3', 'ON');
+    else if (match(['hidupkan relay empat', 'hidupkan relay 4'])) onCommand('iot/lampu/relay/4', 'ON');
     
     // Relay 1-4 OFF
-    else if (text.includes('matikan relay satu')) onCommand('iot/lampu/relay/1', 'OFF');
-    else if (text.includes('matikan relay dua')) onCommand('iot/lampu/relay/2', 'OFF');
-    else if (text.includes('matikan relay tiga')) onCommand('iot/lampu/relay/3', 'OFF');
-    else if (text.includes('matikan relay empat')) onCommand('iot/lampu/relay/4', 'OFF');
+    else if (match(['matikan relay satu', 'matikan relay 1'])) onCommand('iot/lampu/relay/1', 'OFF');
+    else if (match(['matikan relay dua', 'matikan relay 2'])) onCommand('iot/lampu/relay/2', 'OFF');
+    else if (match(['matikan relay tiga', 'matikan relay 3'])) onCommand('iot/lampu/relay/3', 'OFF');
+    else if (match(['matikan relay empat', 'matikan relay 4'])) onCommand('iot/lampu/relay/4', 'OFF');
     
     // Semua ON/OFF
     else if (text.includes('hidupkan semua')) onCommand('iot/lampu/relay/all', 'ON');

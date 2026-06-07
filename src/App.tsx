@@ -68,8 +68,8 @@ export default function App() {
             <Layers className="w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-xl font-bold tracking-tight text-slate-800">LuminaDash IoT</h1>
-            <p className="text-xs text-slate-500 font-medium">Sistem Kendali Penerangan & Monitoring Sensor</p>
+            <h1 className="text-xl font-bold tracking-tight text-slate-800">Zuzu IoT</h1>
+            <p className="text-xs text-slate-500 font-medium">Sistem kendali lampu & Monitoring Suhu/Kelembapan</p>
           </div>
         </div>
         
